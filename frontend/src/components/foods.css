@@ -1,0 +1,42 @@
+
+.flex{
+    display: flex;
+  justify-content: center;
+    gap: 100px;
+   
+}
+.breakfast-section, .lunch-section, .dinner-section{
+    padding: 40px;
+    background-color: rgb(248, 248, 248);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 7px 10px;
+}
+img{
+    border-radius: 3px;
+}
+.text1{
+   
+}
+button{
+    background: transparent;
+    border: 2px solid red;
+    padding: 10px 40px;
+    border-width: thin;
+    cursor: pointer;
+}
+button:hover{
+    background-color: brown;
+    color: aliceblue;
+}
+@media only screen and (max-width: 800px) {
+
+    .flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    .breakfast-section, .lunch-section, .dinner-section  {
+        width: 40%;
+        
+    }
+}

@@ -1,0 +1,23 @@
+.bg-main{
+    background-image: url("../images/food.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 40px;
+    display: flex;
+    color: aliceblue;
+    justify-content: left;
+    gap: 150px;
+}
+.text{
+    padding-top: 100px;
+}
+@media only screen and (max-width: 800px) {
+    .bg-main{
+        display: block;
+    }
+    .main-flex > img{
+        width: 300px;
+    }
+}

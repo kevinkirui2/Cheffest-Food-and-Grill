@@ -1,0 +1,51 @@
+.dinner-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 20px;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.dinner-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+   
+    border-radius: 10px;
+    padding: 20px;
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header{
+    background-image: url('./images/option2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0%;
+    height: 25vh;
+}
+.text2{
+    padding-top: 15px;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.lower-text{
+    padding-left: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+.section1{
+    border: 1px solid red;
+    background-color: orange;
+    padding: 10px;
+    width: 40vh;
+}
+..dinner-item > h2{
+    text-align: left;
+}
+.dinner-item > button {
+    background-color: crimson;
+    color: white;
+    border-radius: 10px;
+}

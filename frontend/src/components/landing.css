@@ -1,0 +1,18 @@
+.division{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    gap: 100px;
+    padding-top:5%;
+}
+
+
+
+
+    .division{
+        display: block;
+        text-align: center;
+    }
+    
+
+
