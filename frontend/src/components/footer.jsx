@@ -8,7 +8,7 @@ const  Footer = () => {
         <div style={{backgroundColor: 'black', color: 'white'}}>
           
             <br></br>
-            <div className="small" style={{display: "block", gap: "300px", padding: "30px"}}>
+            <div className="small">
                 <div className="img">
                     <img width={200} src={require('../images/footer.png')}></img>
                 </div>

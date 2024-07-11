@@ -1,7 +1,22 @@
+
+
+
+
+
+.small{
+    display: flex;
+    
+    justify-content: space-evenly;
+}
+
+
+
+
 @media only screen and (max-width: 800px) {
     .small{
         display: block;
-        display: none;
+        text-align: center;
+       
     }
 
 }

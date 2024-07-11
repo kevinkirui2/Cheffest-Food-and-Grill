@@ -1,9 +1,49 @@
 import './navbar.css'
 import logo from '../images/logo.jpg';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () =>{
+
+
+        const [contentVisible, setContentVisible] = useState(true);
+    
+        const toggleContent = () => {
+            setContentVisible(!contentVisible);
+        };
     return(
         <div>
+            <div className='nav-small'> 
+                <FontAwesomeIcon onClick={toggleContent} style={{fontSize: "37px"}} icon={faBars} />
+                
+                {contentVisible && (
+                <div className="content2">
+                     <AnimatePresence>
+          <motion.div
+            key={"sidebar"}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2, ease: "easeIn" }}
+            className="image"
+          >
+              <li>HOME</li><br></br><br></br>
+                        <li>MENU</li><br></br><br></br>
+                        <li>BLOG</li><br></br><br></br>
+                        <li>CONTACT US</li>
+          
+          </motion.div>
+        </AnimatePresence>
+                    
+                      
+                        
+                    
+                </div>
+                 )}
+            </div>
+           
+            
           
             <nav>
             <div style={{textAlign: "left"}}>
@@ -25,4 +65,5 @@ const Navbar = () =>{
         </div>
     )
 }
+;
 export default Navbar;

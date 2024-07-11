@@ -1,4 +1,20 @@
+.nav-small  {
+    list-style: none;
+    gap: 20px;
+    position: fixed;
+    display: none;
 
+}
+.nav-small > li{
+    gap: 30px;
+}
+.content2{
+    background-color: sandybrown;
+    color: aliceblue;
+    height: 100vh;
+    max-width: 300%;
+    padding: 50px;
+}
 nav{
     display: flex;
     justify-content: space-around;
@@ -35,4 +51,14 @@ nav > h6{
     
    
    
+}
+@media only screen and (max-width: 800px) {
+    nav{
+        display: none;
+    }
+    .nav-small{
+        display: block;
+        padding: 15px;
+    }
+
 }
