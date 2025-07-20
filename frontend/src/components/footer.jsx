@@ -28,10 +28,10 @@ const  Footer = () => {
                 </div>
                 <br></br>
             </div>
-           
-            <div style={{textAlign: "center"}} className="in">
-            <img width={200} src={require('../images/kk.jpg')}></img>
-     </div>
+           <br></br><br></br>
+            <div style={{display: "flex", justifyContent: "center"}} className="in">
+                <img width={200} src={require('../images/kk.jpg')}></img>
+            </div>
         </div>
         
     )

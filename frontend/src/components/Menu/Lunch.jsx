@@ -1,4 +1,5 @@
 import Navbar from "../navbar";
+import React, { useState } from 'react';
 import "./lunch.css"; // Importing CSS for external styling
 import logo2 from './images/footer.png';
 import Footer from "../footer";  
@@ -116,86 +117,62 @@ const dinner = [
 ];
 
 const Lunch = () => {
+    const [cartItems, setCartItems] = useState([]);
 
-  const addCart =(food)=>{
-    <Cart item={food} ></Cart>
+    const addCart = (food) => {
 
-  }
+      alert(`Added ${food.name} to cart`);
+        setCartItems([...cartItems, food]);
+    };
+
     return (
         <div>
             <Navbar />
+            {/* Other components */}
 
+            {/* Breakfast Section */}
 
-            <div>
-                <header style={{ textAlign: "center" }}>
-                  <div className="text2">
-                    <h1>MENU</h1>
-                    <h5>Home -> Menu</h5>
-                    </div>
-                </header>
-
-                
-
-
-            </div>
-
-
-
-
-
-
-
-
-
-           
-       
+            <Cart items={cartItems} />
+            
             <div className="dinner-container">
-              <div className="section1">
-                <img width={200} src={require('./images/vege.png')}></img>
-                <h1 style={{paddingLeft: "50px"}}><span style={{color: "green"}}> LUNCH/DINNER</span><br></br> <span style={{color: "red"}}>MENU</span></h1>
-                <img width={250} src={require('./images/burger1.png')}></img>
-              </div>
-                {dinner.map((item, index) => (
-                    <div className="dinner-item" key={index}>
-                      
-                        <img width={230} src={item.imageUrl} alt={item.name} />
-                        <h2>{item.name}</h2>
-                        <h4>{item.price}/=</h4>
-                     
-                        <button>ADD TO CART</button>
-                       
-                    </div>
-                ))}
-            </div>
-            <br></br>
-                <hr></hr>
-                <br></br>
-                {/* breakfast section */}
-
-            <div className="dinner-container">
-              <div style={{backgroundColor: "red"}} className="section1">
-                <img width={200} src={require('./images/vege.png')}></img>
-                <h1 style={{paddingLeft: "50px"}}><span style={{color: "white"}}>BREAKFAST</span><br></br> <span style={{color: "red"}}>MENU</span></h1>
-                <img width={250} src={require('./images/break.png')}></img>
-              </div>
+                <div className="section1">
+                    {/* Section header */}
+                    <br></br><br></br><br></br>
+                    <h1><b>Breakfast<br></br> Section</b></h1>
+                </div>
                 {breakfast.map((item, index) => (
                     <div className="dinner-item" key={index}>
-                      
                         <img width={230} src={item.imageUrl} alt={item.name} />
                         <h2>{item.name}</h2>
                         <h4>{item.price}/=</h4>
-                     
                         <button onClick={() => addCart(item)}>ADD TO CART</button>
-                       
                     </div>
                 ))}
             </div>
-                <br></br><br></br>
-              <Footer/>
+            
+            {/* Dinner Section */}
+            <div className="dinner-container">
+                <div className="section1">
+                <br></br><br></br><br></br>
+                <h1><b>Lunch<br></br> Section</b></h1>
+                </div>
+                {dinner.map((item, index) => (
+                    <div className="dinner-item" key={index}>
+                        <img width={230} src={item.imageUrl} alt={item.name} />
+                        <h2>{item.name}</h2>
+                        <h4>{item.price}/=</h4>
+                        <button onClick={() => addCart(item)}>ADD TO CART</button>
+                    </div>
+                ))}
+            </div>
 
+            {/* Render the Cart Component and Pass cartItems as a Prop */}
+            
+
+            <Footer />
         </div>
-        
     );
 };
 
 export default Lunch;
+

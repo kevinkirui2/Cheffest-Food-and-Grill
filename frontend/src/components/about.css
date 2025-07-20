@@ -10,6 +10,9 @@
     justify-content: left;
     gap: 150px;
 }
+.main-flex img{
+    
+}
 .text{
     padding-top: 100px;
 }
@@ -17,7 +20,5 @@
     .bg-main{
         display: block;
     }
-    .main-flex > img{
-        width: 300px;
-    }
+    
 }

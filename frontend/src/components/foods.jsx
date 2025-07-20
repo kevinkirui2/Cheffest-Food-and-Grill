@@ -5,10 +5,11 @@ import { motion } from 'framer-motion';
 const Foods = () => {
 
     return(
-        <div> 
+        <div className='wallpaper'> 
             <div style={{textAlign: "center"}} className="text">
-                <h1>What We Offer</h1           >
+                <h1 className='text-4xl'><b>What We Offer</b></h1           >
             </div>
+            <br></br>
             {/* <marquee scrollamout="40"> */}
 
                 <motion.div className="flex"
@@ -23,30 +24,32 @@ const Foods = () => {
                     <div  className="breakfast-section">
                         <img width={270} src={require('../images/break.png')} alt="" />
                         <div className="main-text">
-                            <h2>BREAKFAST</h2>
+                            <h2 className='text-2xl'><b>BREAKFAST</b></h2>
                         </div>
                         <div  className="text1">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio cum nemo fuga saepe,</p>
+                            <p>Variety of breakfast options, including continental, American, and buffet-style breakfasts, featuring fresh pastries, eggs, fruits, cereals, and beverages to start your day perfectly,</p>
                         </div>
+                        <br />
                         <div className="view">
                         <button ><b><Link to="/menu">Menu</Link></b></button>
                         </div>
                     </div>
-                    <br></br>
+                    
 
                     <div  className="lunch-section">
                         <img width={270} src={require('../images/lun.png')} alt="" />
                         <div className="main-text">
-                            <h2>LUNCH</h2>
+                        <h2 className='text-2xl'><b>LUNCH</b></h2>
                         </div>
                         <div  className="text1">
-                           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p> 
+                           <p>Diverse lunch menu, including international cuisines, local dishes, salads, sandwiches, and hearty mains, all prepared with fresh ingredients to suit your taste and dietary preferences.</p> 
                         </div>
+                        <br />
                         <div className="view">
                         <button><b>Menu</b></button>
                         </div>
                     </div>
-                    <br></br>
+                   
 
 
 
@@ -55,23 +58,29 @@ const Foods = () => {
 
 
                     <div className="dinner-section">
-                        <img width={220} src={require('../images/dinne.png')} alt="" />
+                        <div className="text-cente">
+                         <img width={220} src={require('../images/dinne.png')} alt="" />
+                        </div>
                         <div className="main-text">
-                            <h2>DINNER</h2>
+                        <h2 className='text-2xl'><b>DINNER</b></h2>
                         </div>
                         <div className="text1">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <p>Exquisite dinner selection, featuring gourmet dishes, seasonal specials, and international cuisines. Enjoy everything from grilled meats to vegetarian options, complemented by fine wines and delightful desserts.</p>
                         </div>
+                        <br />
                         <div className="view">
                         <button><b>Menu</b></button>
                         </div>
                     </div>
 
+                   
+
             </motion.div>
                     
-            
+           
             {/* </marquee> */}
         </div>
+        
     )
 }
 export default Foods;

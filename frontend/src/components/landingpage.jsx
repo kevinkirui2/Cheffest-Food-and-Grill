@@ -23,17 +23,28 @@ const LandingPage = () => {
             <img width={520} src={require("../images/jj.jpg")}></img>
           </motion.div>
         </AnimatePresence>
+        <motion.div
+            key={"picture"}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeIn" }}
+            className="image"
+          >
         <div className="text">
-          <h1>
-            Are You <span style={{ color: "red" }}> Hungry!</span>
+          <h1 className="text-5xl">
+           <b  id="wozza" >Are You <span id="wozza" style={{ color: "red" }}> Hungry!</span></b> 
           </h1>
-          <p>
-            Visit <span style={{ color: "orange" }}>CHEFFEST</span> Restaturant
+          
+          <p id="sub-heading" class="text-xl mt-3">
+            Visit <span id="sub-heading" style={{ color: "orange" }}>CHEFFEST</span> Restaturant
             In Kericho
           </p>
+          <br></br>
           <button
+          id="sub-heading"
             style={{
-              backgroundColor: "brown",
+              width: "300px",
+              backgroundColor: "red",
               color: "white",
               borderRadius: "3px",
             }}
@@ -41,6 +52,8 @@ const LandingPage = () => {
             View Location
           </button>
         </div>
+
+        </motion.div>
       </div>
     </div>
   );
